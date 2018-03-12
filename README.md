@@ -8,3 +8,11 @@
 4. 해당 라이브러리에 .cpp와 .h에 작성한다.
 5. Arduino 프로그램에서 라이브러리 추가하기 탭에서 잘 등록되었는지 확인한다.
 6. 라이브러리를 include 하여 생성자를 호출하여 사용한다.
+
+
+
+ # ds18b20과 thinkspeak연동
+ds18b20은 dallastempertaure 라이브러리와 onewire 라이브러리를 사용한다.
+thinkspeak와 연동하기 위하여 api.thinkspeak.com이라는 url과 writeapikey를 사용하고 http프로토콜을 사용하여 통신한다.
+기본적으로  field라는 키워드로 데이터를 식별하며 이 코드에서는 GET을 이용하여 header의 정보를 사용한다.
+온도 측정의 인터벌은 1분이며 와이파이를 AP로 하여 통신한다.
