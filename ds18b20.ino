@@ -20,7 +20,7 @@ String working(double deg) {
   return(String("value1=")+String(deg));
 }
 
-void delivering(String payload) { 
+void delivering(String payload,double elapse_time) { 
   WiFiClient client;
   Serial.print("connecting to ");
   Serial.println(host);
@@ -29,7 +29,7 @@ void delivering(String payload) {
     Serial.println(payload);
     return;
   }
-  String getheader = "GET "+ String(url) + String(payload) +" HTTP/1.1"; //+"&"+ String(payload) +" HTTP/1.1";
+  String getheader = "GET "+ String(url) + String(payload)+"&"+String("value2=")+String(elapse_time) +" HTTP/1.1"; //+"&"+ String(payload) +" HTTP/1.1";
   client.println(getheader);
   client.println("User-Agent: ESP8266 Seunghyeun Kim");  
   client.println("Host: " + String(host));  
@@ -71,6 +71,6 @@ void loop() {
      double deg = sensors.getTempCByIndex(0);
      Serial.println(deg);
      String payload = working(deg);
-     delivering(payload);
+     delivering(payload,((double(mark)))/1000.0);
   }
 }
