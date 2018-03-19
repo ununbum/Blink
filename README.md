@@ -19,7 +19,7 @@ thinkspeak와 연동하기 위하여 api.thinkspeak.com이라는 url과 writeapi
 
 
 
-> ds19b20과 IFTTT연동
+## ds19b20과 IFTTT연동
 기존에 사용하였던 ThinkSpeak연동 코드와 동일하다.
 하지만 이번에는 똑같이 GET을 이용하지만 api_key가 parameter로 사용되는것이 아니라 IFTTT는 개인 URL이 주어지기때문에
 URL부분을 바꿔주고 value1과 value2를 parameter로 이용한다. 
