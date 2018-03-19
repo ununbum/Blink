@@ -7,17 +7,17 @@
 OneWire oneWire(D4);
 DallasTemperature sensors(&oneWire);
 
-const char* host = "api.thingspeak.com";
-String url = "/update?api_key=WD112D9UCJ4ZWDPR";   // Your Own Key here
+const char* host = "maker.ifttt.com"; // = "api.thingspeak.com";
+String url   = "/trigger/hot_temp/with/key/d3_Dg-li4_FGSBfl7zhCAB?";// Your Own Key here // = "/update?api_key=WD112D9UCJ4ZWDPR"; 
 const int httpPort = 80;
-int interval = 60000;
+int interval = 5000;
 
 const char* ssid = "ABTC";   // Your own ssid here
 const char* password = "dnflwlq0";  // Your own password here
 
 String working(double deg) { 
   
-  return(String("field1=")+String(deg));
+  return(String("value1=")+String(deg));
 }
 
 void delivering(String payload) { 
@@ -29,7 +29,7 @@ void delivering(String payload) {
     Serial.println(payload);
     return;
   }
-  String getheader = "GET "+ String(url) +"&"+ String(payload) +" HTTP/1.1";
+  String getheader = "GET "+ String(url) + String(payload) +" HTTP/1.1"; //+"&"+ String(payload) +" HTTP/1.1";
   client.println(getheader);
   client.println("User-Agent: ESP8266 Seunghyeun Kim");  
   client.println("Host: " + String(host));  
