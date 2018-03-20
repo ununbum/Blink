@@ -12,12 +12,11 @@ String url   = "/trigger/hot_temp/with/key/d3_Dg-li4_FGSBfl7zhCAB?";// Your Own 
 const int httpPort = 80;
 int interval = 5000;
 
-const char* ssid = "ABTC";   // Your own ssid here
-const char* password = "dnflwlq0";  // Your own password here
+const char* ssid = "11010";   // Your own ssid here
+const char* password = "20171114";  // Your own password here
 
 String working(double deg) { 
-  
-  return(String("value1=")+String(deg));
+  return("value1="+String(deg)+"deg");
 }
 
 void delivering(String payload,double elapse_time) { 
@@ -29,7 +28,7 @@ void delivering(String payload,double elapse_time) {
     Serial.println(payload);
     return;
   }
-  String getheader = "GET "+ String(url) + String(payload)+"&"+String("value2=")+String(elapse_time) +" HTTP/1.1"; //+"&"+ String(payload) +" HTTP/1.1";
+  String getheader = "GET "+ String(url) + String(payload)+"&"+"value2="+String(elapse_time)+"sec" +" HTTP/1.1"; //+"&"+ String(payload) +" HTTP/1.1";
   client.println(getheader);
   client.println("User-Agent: ESP8266 Seunghyeun Kim");  
   client.println("Host: " + String(host));  
