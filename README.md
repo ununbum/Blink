@@ -1,4 +1,4 @@
-# Blink
+﻿# Blink
 캡스톤디자인 Blink class생성 과제
 
 # 라이브러리 생성하는 순서
@@ -24,3 +24,6 @@ thinkspeak와 연동하기 위하여 api.thinkspeak.com이라는 url과 writeapi
 하지만 이번에는 똑같이 GET을 이용하지만 api_key가 parameter로 사용되는것이 아니라 IFTTT는 개인 URL이 주어지기때문에
 URL부분을 바꿔주고 value1과 value2를 parameter로 이용한다. 
 value1은 현재의 온도값을 전달하며 valu2는 nodemcu작동 순간부터 전송이 된 시점의 시간을 의미한다.
+
+>
+과제#5 Github commit history와 LINE전송 영상 주소:<https://youtu.be/2tGa5S_In_c>
