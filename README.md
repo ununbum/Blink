@@ -25,4 +25,8 @@ thinkspeak와 연동하기 위하여 api.thinkspeak.com이라는 url과 writeapi
 URL부분을 바꿔주고 value1과 value2를 parameter로 이용한다. 
 value1은 현재의 온도값을 전달하며 valu2는 nodemcu작동 순간부터 전송이 된 시점의 시간을 의미한다.
 
+# express js를 이용한 데이터수집
+epress js와 nodejs를 이용하여 URL을 통해 입력받은 데이터를 get이라는 파라미터를 통하여 dump할수 있는 웹을 만든다.
+get이후에 count라는 파라미터로 dump갯수를 입력받을수 있으며 만약 아무 data도 존재하지 않는다면 에러 메세지를 띄운다.
+
 > 과제#5 Github commit history와 LINE전송 영상 주소:<https://youtu.be/2tGa5S_In_c>
